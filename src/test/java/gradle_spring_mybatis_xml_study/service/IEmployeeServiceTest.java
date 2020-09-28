@@ -1,11 +1,10 @@
 package gradle_spring_mybatis_xml_study.service;
 
-import javax.inject.Inject;
-
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.util.Assert;
@@ -19,7 +18,7 @@ import gradle_spring_mybatis_xml_study.dto.Employee;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class IEmployeeServiceTest extends AbstractTest{
 
-    @Inject
+    @Autowired
     private IEmployeeService service;
     
     @Test
