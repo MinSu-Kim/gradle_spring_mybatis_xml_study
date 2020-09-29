@@ -2,6 +2,9 @@ package gradle_spring_mybatis_xml_study.service;
 
 import java.sql.SQLException;
 
+import org.apache.ibatis.logging.Log;
+import org.apache.ibatis.logging.LogFactory;
+import org.junit.After;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,14 +14,20 @@ import org.springframework.dao.DuplicateKeyException;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import gradle_spring_mybatis_xml_study.AbstractTest;
 import gradle_spring_mybatis_xml_study.dto.Department;
 import gradle_spring_mybatis_xml_study.dto.Employee;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "classpath:context-root.xml" })
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class TransactionServiceTest extends AbstractTest {
+public class TransactionServiceTest {
+    protected static final Log log = LogFactory.getLog(TransactionServiceTest.class);
+
+    @After
+    public void tearDown() throws Exception {
+        System.out.println();
+    }
+    
     @Autowired
     private TransactionService service;
 

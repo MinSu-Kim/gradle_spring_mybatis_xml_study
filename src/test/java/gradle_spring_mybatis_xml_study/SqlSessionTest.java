@@ -18,8 +18,8 @@ import org.springframework.util.Assert;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "file:src/main/resources/context-root.xml" })
-public class DataSourceTest {
-    protected static final Log log = LogFactory.getLog(DataSourceTest.class);
+public class SqlSessionTest {
+    protected static final Log log = LogFactory.getLog(SqlSessionTest.class);
 
     @After
     public void tearDown() throws Exception {
@@ -27,13 +27,13 @@ public class DataSourceTest {
     }
     
     @Autowired
-    private DataSource dataSource;
-   
-    @Test
-    public void testDataSource() throws SQLException {
-        log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
-        log.debug("DataSource " + dataSource);
-        log.debug("LoginTimeout " + dataSource.getLoginTimeout());
-    }
+    private SqlSessionFactory sessionFactory;
 
+    @Test
+    public void testOpenSession() {
+        log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
+        SqlSession session = sessionFactory.openSession();
+        log.debug("session " + session);
+        Assert.notNull(session, "The class must not be null");
+    }
 }
