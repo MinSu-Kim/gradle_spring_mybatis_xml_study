@@ -1,9 +1,5 @@
 package gradle_spring_mybatis_xml_study;
 
-import java.sql.SQLException;
-
-import javax.sql.DataSource;
-
 import org.apache.ibatis.logging.Log;
 import org.apache.ibatis.logging.LogFactory;
 import org.apache.ibatis.session.SqlSession;

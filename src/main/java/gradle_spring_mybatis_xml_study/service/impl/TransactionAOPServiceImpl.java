@@ -2,7 +2,6 @@ package gradle_spring_mybatis_xml_study.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import gradle_spring_mybatis_xml_study.dto.Department;
 import gradle_spring_mybatis_xml_study.dto.Employee;
