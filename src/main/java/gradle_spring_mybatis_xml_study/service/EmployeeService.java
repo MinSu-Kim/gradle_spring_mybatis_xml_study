@@ -4,7 +4,6 @@ import org.springframework.stereotype.Service;
 
 import gradle_spring_mybatis_xml_study.dto.Employee;
 
-@Service
 public interface EmployeeService {
     
     public int addEmployee(Employee employee);

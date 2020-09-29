@@ -24,7 +24,6 @@
    
     <aop:config>
         <aop:pointcut id="servicePublicMethod" expression="execution(public * gradle_spring_mybatis_xml_study.service.impl..*ServiceImpl.*(..))" />
-        
         <aop:advisor advice-ref="txAdvice" pointcut-ref="servicePublicMethod"/>
     </aop:config>
 
