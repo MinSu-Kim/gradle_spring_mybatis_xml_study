@@ -31,12 +31,12 @@
 			</arguments>
 		</buildCommand>
 		<buildCommand>
-			<name>net.harawata.mybatipse.MapperValidationBuilder</name>
+			<name>org.springframework.ide.eclipse.core.springbuilder</name>
 			<arguments>
 			</arguments>
 		</buildCommand>
 		<buildCommand>
-			<name>org.springframework.ide.eclipse.core.springbuilder</name>
+			<name>net.harawata.mybatipse.MapperValidationBuilder</name>
 			<arguments>
 			</arguments>
 		</buildCommand>
@@ -48,7 +48,7 @@
 		<nature>org.eclipse.wst.common.modulecore.ModuleCoreNature</nature>
 		<nature>org.eclipse.jem.workbench.JavaEMFNature</nature>
 		<nature>org.eclipse.buildship.core.gradleprojectnature</nature>
-		<nature>net.harawata.mybatipse.MyBatisNature</nature>
 		<nature>org.jkiss.dbeaver.DBeaverNature</nature>
+		<nature>net.harawata.mybatipse.MyBatisNature</nature>
 	</natures>
 </projectDescription>
